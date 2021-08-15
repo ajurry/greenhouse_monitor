@@ -1,0 +1,29 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "0f03c9d782c8af420786ab7a9b3f022a16739030b979ac022ac2656ae788d96e"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "2.7"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.python.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "mock.gpio": {
+            "hashes": [
+                "sha256:1fe27652ccfa580081b903707274f761c72177abae79f015774ee4009f50afe6",
+                "sha256:f66b270da2980e3f234e1d45395aa3147bd9bd25d97f2ff404c6dbe09ee8634f"
+            ],
+            "index": "pypi",
+            "version": "==0.1.8"
+        }
+    },
+    "develop": {}
+}
