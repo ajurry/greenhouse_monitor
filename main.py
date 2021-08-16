@@ -7,7 +7,7 @@ from config_loader.json_reader import JsonReader
 from config_loader.monitor_config import Config
 
 def main():
-    reader = JsonReader(r"monitor_config.json")
+    reader = JsonReader("monitor_config.json")
     json = reader.get_json()
     
     config = Config.from_json(json)
