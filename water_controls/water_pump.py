@@ -12,4 +12,3 @@ class WaterPump:
 
     def __init__(self, config: monitor_config.Config):
         self.GPIO_pump_pin = config.water_control_pump_pin
-        GPIO
