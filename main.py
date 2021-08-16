@@ -3,14 +3,19 @@ try:
 except: 
     import Mock.GPIO as GPIO
 
-import config_loader.json_config_reader as json_config_reader
-import config_loader.monitor_config as monitor_config
+from config_loader.json_reader import JsonReader
+from config_loader.monitor_config import Config
 
 def main():
-    reader = json_config_reader.JsonConfigReader(r"monitor_config.json")
-    config = reader.get_config()
+    reader = JsonReader(r"monitor_config.json")
+    json = reader.get_json()
     
-    
+    config = Config.from_json(json)
+    print(config)
+    print(config.water_control_pump_pin)
+
+    json_str = config.to_json()
+    print(json_str)
 
 if __name__=="__main__":
     main()
