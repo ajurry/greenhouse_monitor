@@ -1,14 +1,12 @@
-import json
 from dataclasses import dataclass
+from configparser import ConfigParser
+
+config_item = 'monitor'
 
 @dataclass
-class Config:
+class MonitorConfig:
     """Config data structure for passing settings around"""
-    water_control_pump_pin: int
 
-    def to_json(self):
-        return json.dumps(self.__dict__)
-
-    @classmethod
-    def from_json(cls, json):
-        return cls(**json)
+    def __init__(self, config_parser: ConfigParser):
+        specified_config_item = config_parser.items(config_item)
+        self.__dict__.update(specified_config_item)
